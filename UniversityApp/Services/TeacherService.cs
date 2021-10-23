@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UniversityApp.Services;
 
 namespace UniversityApp
 {
-    public class TeacherService
+    public class TeacherService : ITeacherService
     {
-        List<TeacherModel> _teachers;
+        private List<TeacherModel> _teachers;
         public TeacherService()
         {
             _teachers = new List<TeacherModel>();

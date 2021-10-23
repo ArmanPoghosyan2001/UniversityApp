@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using UniversityApp.Services;
 
 namespace UniversityApp
 {
-    public class StudentService
+    public class StudentService : IStudentService
     {
-        List<StudentModel> _students;
+        private List<StudentModel> _students;
         public StudentService()
         {
             _students = new List<StudentModel>();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UniversityApp.Services;
 
 namespace UniversityApp
 {
@@ -7,9 +8,9 @@ namespace UniversityApp
     {
         static void Main(string[] args)
         {
-            TeacherService teacherService = new TeacherService();
-            StudentService studentService = new StudentService();
-            UniversityManager universityManager = new UniversityManager();
+            ITeacherService teacherService = new TeacherService();
+            IStudentService studentService = new StudentService();
+            IUnivercityManager universityManager = new UniversityManager();
 
             List<TeacherModel> teachers = new List<TeacherModel>();
 
@@ -29,6 +30,8 @@ namespace UniversityApp
             teachers = universityManager.Swap(students, teachers);
 
             students = universityManager.Swap(teachers, students);
+
+
         }
     }
 }
